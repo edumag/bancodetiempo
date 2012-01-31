@@ -1,4 +1,4 @@
-Aquest programari est‡ llicenciat sota GPL (veure GPL.txt per a mÈs informaciÛ). No hi ha garantia o garanties de cap tipus, en allÚ que fa referËncia a la legislaciÛ vigent. 
+Aquest programari est√† llicenciat sota GPL (veure GPL.txt per a m√©s informaci√≥). No hi ha garantia o garanties de cap tipus, en all√≤ que fa refer√®ncia a la legislaci√≥ vigent. 
 
 Demana:
 
@@ -8,52 +8,52 @@ Demana:
 
 1. Pujar els arxius LocalExchange a un servidor web
 
-2. Instal∑lar les bibliotques PHP Pear. Hi ha diverses formes de fer-ho. Tot seguit se n'especifiquen dues. Per a mÈs opcions, consulta http://pear.php.net/manual/en/installation.shared.php
+2. Instal¬∑lar les bibliotques PHP Pear. Hi ha diverses formes de fer-ho. Tot seguit se n'especifiquen dues. Per a m√©s opcions, consulta http://pear.php.net/manual/en/installation.shared.php
 
-a) Utilitza l'instal∑lador PEAR
+a) Utilitza l'instal¬∑lador PEAR
 
-Si PEAR s'ha instal∑lat al servidor web i tens accÈs a l'administraciÛ (veure pear.php.net per a mÈs informaciÛ) pots copiar i enganxar el seg¸ent comandament obrint un terminal i seguint endavant amb el pas 3:
+Si PEAR s'ha instal¬∑lat al servidor web i tens acc√©s a l'administraci√≥ (veure pear.php.net per a m√©s informaci√≥) pots copiar i enganxar el seg√ºent comandament obrint un terminal i seguint endavant amb el pas 3:
 
 "Pear install-f File_PDF HTML_Common HTML_QuickForm HTML_Table HTTP HTTP_Download HTTP_HEADER Mail_Mime OLE Spreadsheet_Excel_Writer Text_Password".
 
-Si no tens accÈs d'administrador, l'administrador del lloc pot estar disposat a executar el comandament anterior. Una simple trucada o un correu electrÚnic haurien de facilitar el contacte. 
+Si no tens acc√©s d'administrador, l'administrador del lloc pot estar disposat a executar el comandament anterior. Una simple trucada o un correu electr√≤nic haurien de facilitar el contacte. 
 
 b) Descarrega el paquete PEAR de Sourceforge.net
 
-Ja que molt serveis web d'allotjament no voldran instal∑lar res per a tu, o facilitar-hi accÈs, et proporcionem el conjunt de biblioteques necess‡ries com un paquet a Sourceforge (http://sourceforge.net/project/showfiles.php?group_id=136704). Les has de descarregar i descomprimir.  
+Ja que molt serveis web d'allotjament no voldran instal¬∑lar res per a tu, o facilitar-hi acc√©s, et proporcionem el conjunt de biblioteques necess√†ries com un paquet a Sourceforge (http://sourceforge.net/project/showfiles.php?group_id=136704). Les has de descarregar i descomprimir.  
 
-El seg¸ent pas consisteix en carregar les biblioteques en un espai del servidor. Per motius de seguretat, haur‡s d'escollir un espai no accessible per HTTP, perÚ sÌ per FTP. En general, el directori per defecte ser‡ un espai (els arxius d'accÈs, amb els arxius d'intercanvi local, normalment se situen a la subcarpeta htdocs, o a public_html). En tot cas, haur‡s d'escollir un espai on carregar els arxius PEAR.
+El seg√ºent pas consisteix en carregar les biblioteques en un espai del servidor. Per motius de seguretat, haur√†s d'escollir un espai no accessible per HTTP, per√≤ s√≠ per FTP. En general, el directori per defecte ser√† un espai (els arxius d'acc√©s, amb els arxius d'intercanvi local, normalment se situen a la subcarpeta htdocs, o a public_html). En tot cas, haur√†s d'escollir un espai on carregar els arxius PEAR.
 
-L'˙ltim pas Ès editar l'arxiu de configuraciÛ de text "includes / inc.config.php" i establir el valor PEAR_PATH. Aquest valor s'ha d'ajustar a la ruta completa d'accÈs a la carpeta del servidor. Si no saps la ruta, vÈs a http://your-domain-name/path.php i apareixer‡ la ubicaciÛ dels arxius al servidor. Per exemple, en el cas de "/ home / usuario / htdocs" es podria establir PEAR_PATH a "/ home / usuario / PEAR". Tingues en compte que si estableixes aquesta variable de forma incorrecta, rebr‡s molts missatges d'error quan intentis fer servir LocalExchange. Si Ès aixÌ, hauries de repetir aquest pas. Tingues en compte tambÈ que si est‡s fent servir un servidor Windows, possiblement haur‡s de fer servir la doble barra al PEAR_PATH (Ès a dir, "C: \ \ Archivos de programa \ \ PEAR"). No sÈ per quË...
+L'√∫ltim pas √©s editar l'arxiu de configuraci√≥ de text "includes / inc.config.php" i establir el valor PEAR_PATH. Aquest valor s'ha d'ajustar a la ruta completa d'acc√©s a la carpeta del servidor. Si no saps la ruta, v√©s a http://your-domain-name/path.php i apareixer√† la ubicaci√≥ dels arxius al servidor. Per exemple, en el cas de "/ home / usuario / htdocs" es podria establir PEAR_PATH a "/ home / usuario / PEAR". Tingues en compte que si estableixes aquesta variable de forma incorrecta, rebr√†s molts missatges d'error quan intentis fer servir LocalExchange. Si √©s aix√≠, hauries de repetir aquest pas. Tingues en compte tamb√© que si est√†s fent servir un servidor Windows, possiblement haur√†s de fer servir la doble barra al PEAR_PATH (√©s a dir, "C: \ \ Archivos de programa \ \ PEAR"). No s√© per qu√®...
 
 Ok, endavant.
 
-3. Crea una nueva base de dades MySQL i, com a mÌnim un compte d'usuari amb accÈs complet. Pots cridar la base de dades i l'usuari com vulguis, perÚ haur‡s d'introduir aquesta informaciÛ a l'arxiu de text de configuraciÛ "includes / inc.config.php".
+3. Crea una nueva base de dades MySQL i, com a m√≠nim un compte d'usuari amb acc√©s complet. Pots cridar la base de dades i l'usuari com vulguis, per√≤ haur√†s d'introduir aquesta informaci√≥ a l'arxiu de text de configuraci√≥ "includes / inc.config.php".
 
-4. Edita includes / inc.config.php. Aquest arxiu contÈ moltes configuracions opcionals. Fan falta el nom de domini i les dades de configuraciÛ de registre. TambÈ haur‡s d'establir els valors de les adreces de correu-e.
+4. Edita includes / inc.config.php. Aquest arxiu cont√© moltes configuracions opcionals. Fan falta el nom de domini i les dades de configuraci√≥ de registre. Tamb√© haur√†s d'establir els valors de les adreces de correu-e.
 
-5. Obre un navegador. VÈs a http://your-domain-name/create_db.php. AixÚ crear‡ les taules de les bases de dades i inserir‡ les dades inicials. 
+5. Obre un navegador. V√©s a http://your-domain-name/create_db.php. Aix√≤ crear√† les taules de les bases de dades i inserir√† les dades inicials. 
 
 Nota
    
-   En aquesta versiÛ feta per totbisbal.com Ès necessari instal∑lar la base de dades des de l'arxiu adjunt amb la carpeta install/bdt.sql. La forma mÈs senzilla de fer-ho Ès des de phpmyadmin i important el document. 
+   En aquesta versi√≥ feta per totbisbal.com √©s necessari instal¬∑lar la base de dades des de l'arxiu adjunt amb la carpeta install/bdt.sql. La forma m√©s senzilla de fer-ho √©s des de phpmyadmin i important el document. 
 
-6. Ara hauries de poder connectar amb l'usuari "admin" i la contrasenya "password". VÈs a la secciÛ Perfil i, per seguretat, canvia la contrasenya del compte. 
+6. Ara hauries de poder connectar amb l'usuari "admin" i la contrasenya "password". V√©s a la secci√≥ Perfil i, per seguretat, canvia la contrasenya del compte. 
 
-7. TambÈ per motius de seguretat haur‡s d'esborrar el directori install/ del servidor.
+7. Tamb√© per motius de seguretat haur√†s d'esborrar el directori install/ del servidor.
 
-8. Per fer servir les funcions de pujada d'arxius (per exemple, pujar un butlletÌ informatiu), haur‡s d'establir els permisos dels "arxius pujats" de manera que el compte d'usuari (sovint www-data) tingui permisos d'escriptura.  
+8. Per fer servir les funcions de pujada d'arxius (per exemple, pujar un butllet√≠ informatiu), haur√†s d'establir els permisos dels "arxius pujats" de manera que el compte d'usuari (sovint www-data) tingui permisos d'escriptura.  
 
-ConfiguraciÛ addicional:
+Configuraci√≥ addicional:
 
 1. Edita style.css, inc.config.php i afegeix arxius d'imatge a la carpeta "imatges" per personalitzar l'espai. Les imatges es poden modificar editant l'arxiu inc.config.php.
 
-2. La carpeta "info" contÈ un seguit d'arxius html est‡tics que ajuden a explicar quË Ès la moneda local. Pots fer servir aquests arxius com vulguis, Ès clar, perÚ possiblement els vulguis adaptar a les teves necessitats. Els arxius s'han d'editar amb un editor de text. El sistema no inclou cap editor de continguts en aquests moments. 
+2. La carpeta "info" cont√© un seguit d'arxius html est√†tics que ajuden a explicar qu√® √©s la moneda local. Pots fer servir aquests arxius com vulguis, √©s clar, per√≤ possiblement els vulguis adaptar a les teves necessitats. Els arxius s'han d'editar amb un editor de text. El sistema no inclou cap editor de continguts en aquests moments. 
 
-3. Les categories de la llista es poden editar per defecte al men˙ d'administraciÛ. 
+3. Les categories de la llista es poden editar per defecte al men√∫ d'administraci√≥. 
 
-El sistema corre sobre Linux i FreeBSD. Hauria de funcionar tambÈ en un servidor Windows, perÚ no ho hem verificat. 
+El sistema corre sobre Linux i FreeBSD. Hauria de funcionar tamb√© en un servidor Windows, per√≤ no ho hem verificat. 
 
 Si tens preguntes o comentaris, pots enviar un correu-e a bdt@totbisbal.com
 
-* Les taules InnoDB es fan servir per tenir la base dades equilibrada. El sistema es pot fer servir sense suport per a InnoDB, perÚ no es recomana. Haur‡s de comentar les lÌnies a la part superior de l'arxiu create_db.php. Si contactes l'adminsitrador de la base de dades, pregunta-li si es pot activar. Pots prendre de referËncia http://dev.mysql.com/doc/mysql/en/innodb-overview.html
+* Les taules InnoDB es fan servir per tenir la base dades equilibrada. El sistema es pot fer servir sense suport per a InnoDB, per√≤ no es recomana. Haur√†s de comentar les l√≠nies a la part superior de l'arxiu create_db.php. Si contactes l'adminsitrador de la base de dades, pregunta-li si es pot activar. Pots prendre de refer√®ncia http://dev.mysql.com/doc/mysql/en/innodb-overview.html

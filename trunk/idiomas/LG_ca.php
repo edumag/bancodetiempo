@@ -1,5 +1,5 @@
 <?php
-// Archivo generado automaticamente por GcmConfig Tue Jan 31 9:54:55 CET 2012
+// Archivo generado automaticamente por GcmConfig Tue Jan 31 12:50:14 CET 2012
 $LG_ca['Banc de temps de...']='';
 $LG_ca['banc de temps de...']='';
 $LG_ca['Estem fent tasques de manteniment al ']='';
@@ -78,4 +78,7 @@ $LG_ca['Com funciona el banc del temps?']='';
 $LG_ca['Tipus d\'intercanvi']='';
 $LG_ca['Condicions d\'ús']='';
 $LG_ca['Últimes novetats']='';
+$LG_ca['Properament us explicarem novetats sobre el Banc de Temps.']='';
+$LG_ca['Creat sota']='';
+$LG_ca['Credits']='';
 ?>

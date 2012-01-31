@@ -1,59 +1,59 @@
-Este software se licencia bajo GPL (ver GPL.txt para m·s informaciÛn). No tiene  garantÌa o garantÌas de ning˙n tipo, en lo concerniente a la legislaciÛn vigente.
+Este software se licencia bajo GPL (ver GPL.txt para m√°s informaci√≥n). No tiene  garant√≠a o garant√≠as de ning√∫n tipo, en lo concerniente a la legislaci√≥n vigente.
 
 Requiere:
 
 - PHP 5.1 o superior
 - MySQL 3.23 o superior con soporte para tablas InnoDB *
-- Las bibliotecas que se especifican a continuaciÛn
+- Las bibliotecas que se especifican a continuaci√≥n
 
 1. Subir los archivos LocalExchange a un servidor web
 
-2. Instalar las bibliotecas PHP Pear. Hay varias formas de hacerlo. A continuaciÛn se detallan dos. Para obtener m·s opciones, consulta http://pear.php.net/manual/en/installation.shared.php
+2. Instalar las bibliotecas PHP Pear. Hay varias formas de hacerlo. A continuaci√≥n se detallan dos. Para obtener m√°s opciones, consulta http://pear.php.net/manual/en/installation.shared.php
 
 a) Usar el instalador PEAR
 
-Si PEAR se ha instalado en el servidor web y tienes acceso a la administraciÛn (ver pear.php.net para m·s informaciÛn) puedes copiar y pegar el siguiente comando abriendo un terminal y luego siguiendo adelante con el paso 3:
+Si PEAR se ha instalado en el servidor web y tienes acceso a la administraci√≥n (ver pear.php.net para m√°s informaci√≥n) puedes copiar y pegar el siguiente comando abriendo un terminal y luego siguiendo adelante con el paso 3:
 
 "Pear install-f File_PDF HTML_Common HTML_QuickForm HTML_Table HTTP HTTP_Download HTTP_HEADER Mail_Mime OLE Spreadsheet_Excel_Writer Text_Password".
 
-Si no tienes acceso como administrador, el administrador del sitio web puede estar dispuesto a ejecutar el comando anterior. Una simple llamada o correo electrÛnico deberÌan facilitar el contacto.
+Si no tienes acceso como administrador, el administrador del sitio web puede estar dispuesto a ejecutar el comando anterior. Una simple llamada o correo electr√≥nico deber√≠an facilitar el contacto.
 
 b) Descargar Paquete de PEAR de Sourceforge.net
 
-Dado que muchos servicios web de alojamiento no estar·n dispuestos a instalar nada por ti, o a darle acceso, hemos proporcionado el conjunto de bibliotecas necesarias como un paquete en Sourceforge (http://sourceforge.net/project/showfiles.php?group_id=136704). Debes descargarlas y descomprimirlas. 
+Dado que muchos servicios web de alojamiento no estar√°n dispuestos a instalar nada por ti, o a darle acceso, hemos proporcionado el conjunto de bibliotecas necesarias como un paquete en Sourceforge (http://sourceforge.net/project/showfiles.php?group_id=136704). Debes descargarlas y descomprimirlas. 
 
-El siguiente paso consiste en cargar las bibliotecas en un espacio del servidor web. Por razones de seguridad, deber·s elegir una ubicaciÛn no  accesible por HTTP, pero sÌ a travÈs de FTP. En general, el directorio por defecto ser· un espacio (los archivos de acceso web, como los archivos de intercambio local, est·n por lo general en una subcarpeta htdocs o public_html). En cualquier caso, deber·s elegir un espacio donde cargar los archivos PEAR.
+El siguiente paso consiste en cargar las bibliotecas en un espacio del servidor web. Por razones de seguridad, deber√°s elegir una ubicaci√≥n no  accesible por HTTP, pero s√≠ a trav√©s de FTP. En general, el directorio por defecto ser√° un espacio (los archivos de acceso web, como los archivos de intercambio local, est√°n por lo general en una subcarpeta htdocs o public_html). En cualquier caso, deber√°s elegir un espacio donde cargar los archivos PEAR.
 
-El ˙ltimo paso consiste en editar el archivo de configuraciÛn de texto "includes / inc.config.php" y establecer el valor PEAR_PATH. Este valor se debe ajustar a la ruta completa de acceso en la carpeta del servidor. Si no conoces la ruta, ve a http://your-domain-name/path.php y aparecer· la ubicaciÛn de los archivos en el servidor. Por ejemplo, en el caso de "/ home / usuario / htdocs" se podrÌa establecer PEAR_PATH a "/ home / usuario / PEAR". Ten en cuenta que si se establece esta variable de forma incorrecta, recibir·s muchos mensajes de error cuando intentes utilizar LocalExchange. Si es asÌ, deberÌas volver sobre este paso. TambiÈn ten en cuenta que si est·s usando un servidor Windows, es posible que debas usar la doble barra en el PEAR_PATH (es decir, "C: \ \ Archivos de programa \ \ PEAR"). No sÈ por quÈ...
+El √∫ltimo paso consiste en editar el archivo de configuraci√≥n de texto "includes / inc.config.php" y establecer el valor PEAR_PATH. Este valor se debe ajustar a la ruta completa de acceso en la carpeta del servidor. Si no conoces la ruta, ve a http://your-domain-name/path.php y aparecer√° la ubicaci√≥n de los archivos en el servidor. Por ejemplo, en el caso de "/ home / usuario / htdocs" se podr√≠a establecer PEAR_PATH a "/ home / usuario / PEAR". Ten en cuenta que si se establece esta variable de forma incorrecta, recibir√°s muchos mensajes de error cuando intentes utilizar LocalExchange. Si es as√≠, deber√≠as volver sobre este paso. Tambi√©n ten en cuenta que si est√°s usando un servidor Windows, es posible que debas usar la doble barra en el PEAR_PATH (es decir, "C: \ \ Archivos de programa \ \ PEAR"). No s√© por qu√©...
 
 Ok, adelante.
 
-3. Crear una nueva base de datos MySQL y, como mÌnimo, una cuenta de usuario con acceso completo. Puedes llamar a la base de datos y usuario que quieras, pero deber·s introducir esa informaciÛn en el archivo de texto de configuraciÛn "includes / inc.config.php".
+3. Crear una nueva base de datos MySQL y, como m√≠nimo, una cuenta de usuario con acceso completo. Puedes llamar a la base de datos y usuario que quieras, pero deber√°s introducir esa informaci√≥n en el archivo de texto de configuraci√≥n "includes / inc.config.php".
 
-4. Editar includes / inc.config.php. Este archivo contiene muchas configuraciones opcionales. Son necesarios el nombre de dominio y los datos de configuraciÛn de registro. TambiÈn deber·s establecer los valores de las direcciones de correo electrÛnico.
+4. Editar includes / inc.config.php. Este archivo contiene muchas configuraciones opcionales. Son necesarios el nombre de dominio y los datos de configuraci√≥n de registro. Tambi√©n deber√°s establecer los valores de las direcciones de correo electr√≥nico.
 
-5. Abre un navegador web. Ve a http://your-domain-name/create_db.php. Esto crear· las tablas de las bases de datos e insertar· los datos iniciales.
+5. Abre un navegador web. Ve a http://your-domain-name/create_db.php. Esto crear√° las tablas de las bases de datos e insertar√° los datos iniciales.
 
 Nota
    
-   En esta versiÛn realizada por totbisbal.com es necesario hacer una instalaciÛn de la base de datos desde el archivo adjunto en la carpeta install/bdt.sql. La forma m·s sencilla de hacerlo es desde phpmyadmin e importando el documento.
+   En esta versi√≥n realizada por totbisbal.com es necesario hacer una instalaci√≥n de la base de datos desde el archivo adjunto en la carpeta install/bdt.sql. La forma m√°s sencilla de hacerlo es desde phpmyadmin e importando el documento.
 
-6. Ahora deberÌas ser capaz de conectar con el usuario "admin" y la contraseÒa "password". Ve a la secciÛn Perfil y, por seguridad, cambia la contraseÒa de esta cuenta.
+6. Ahora deber√≠as ser capaz de conectar con el usuario "admin" y la contrase√±a "password". Ve a la secci√≥n Perfil y, por seguridad, cambia la contrase√±a de esta cuenta.
 
-7. TambiÈn por razones de seguridad deber·s borrar el directorio install/ del servidor.
+7. Tambi√©n por razones de seguridad deber√°s borrar el directorio install/ del servidor.
 
-8. Con el fin de utilizar las funciones de la subida de archivos (por ejemplo, subir un boletÌn de noticias), deber·s establecer los permisos de los "archivos subidos" de manera que la cuenta de usuario web (a menudo www-data) tenga permisos de escritura. 
+8. Con el fin de utilizar las funciones de la subida de archivos (por ejemplo, subir un bolet√≠n de noticias), deber√°s establecer los permisos de los "archivos subidos" de manera que la cuenta de usuario web (a menudo www-data) tenga permisos de escritura. 
 
-ConfiguraciÛn adicional:
+Configuraci√≥n adicional:
 
-1. Edita style.css, inc.config.php y aÒade archivos de imagen a la carpeta "im·genes" para personalitzar el sitio. Las im·genes se pueden modificar editanto el archivo inc.config.php.
+1. Edita style.css, inc.config.php y a√±ade archivos de imagen a la carpeta "im√°genes" para personalitzar el sitio. Las im√°genes se pueden modificar editanto el archivo inc.config.php.
 
-2. La carpeta "info" contiene una serie de archivos html est·ticos que ayudan a explicar quÈ es la moneda local. Puedes usar estos archivos como quieras, por supuesto, pero es posible que desees adaptarlos a tus necesidades. Los archivos se deben editar con un editor de texto. Actualmente el sistema no incluye ning˙n editor de contenidos.
+2. La carpeta "info" contiene una serie de archivos html est√°ticos que ayudan a explicar qu√© es la moneda local. Puedes usar estos archivos como quieras, por supuesto, pero es posible que desees adaptarlos a tus necesidades. Los archivos se deben editar con un editor de texto. Actualmente el sistema no incluye ning√∫n editor de contenidos.
 
-3. Las catergorÌas listadas por defecto se puden editar desde el men˙ de administraciÛn.
+3. Las catergor√≠as listadas por defecto se puden editar desde el men√∫ de administraci√≥n.
 
-El sistema corre en Linux y FreeBSD. DeberÌa correr tambiÈn en un servidor Windows, pero esto no ha sido probado. 
+El sistema corre en Linux y FreeBSD. Deber√≠a correr tambi√©n en un servidor Windows, pero esto no ha sido probado. 
 
-Si tienes preguntas o comentarios puedes enviar un correo electrÛnico a bdt@totbisbal.com
+Si tienes preguntas o comentarios puedes enviar un correo electr√≥nico a bdt@totbisbal.com
 
-* Las tablas InnoDB se utilizan para tener la base de datos en equilibrio. Es posible utilizar el sistema sin soporte para InnoDB, pero no es recomendable. Para ello, tendr·s que comentar las lÌneas en la parte superior del archivo create_db.php. Si contactas al administrador de la base de datos, preg˙ntale si se puede activar. Como referencia puedes consultar http://dev.mysql.com/doc/mysql/en/innodb-overview.html
+* Las tablas InnoDB se utilizan para tener la base de datos en equilibrio. Es posible utilizar el sistema sin soporte para InnoDB, pero no es recomendable. Para ello, tendr√°s que comentar las l√≠neas en la parte superior del archivo create_db.php. Si contactas al administrador de la base de datos, preg√∫ntale si se puede activar. Como referencia puedes consultar http://dev.mysql.com/doc/mysql/en/innodb-overview.html
