@@ -1,0 +1,59 @@
+Aquest programari està llicenciat sota GPL (veure GPL.txt per a més informació). No hi ha garantia o garanties de cap tipus, en allò que fa referència a la legislació vigent. 
+
+Demana:
+
+- PHP 5.1 o superior
+- MySQL 3.23 o superior amb suport per a taules InnoDB *
+- Les biblioteques que es detallen tot seguit
+
+1. Pujar els arxius LocalExchange a un servidor web
+
+2. Instal·lar les bibliotques PHP Pear. Hi ha diverses formes de fer-ho. Tot seguit se n'especifiquen dues. Per a més opcions, consulta http://pear.php.net/manual/en/installation.shared.php
+
+a) Utilitza l'instal·lador PEAR
+
+Si PEAR s'ha instal·lat al servidor web i tens accés a l'administració (veure pear.php.net per a més informació) pots copiar i enganxar el següent comandament obrint un terminal i seguint endavant amb el pas 3:
+
+"Pear install-f File_PDF HTML_Common HTML_QuickForm HTML_Table HTTP HTTP_Download HTTP_HEADER Mail_Mime OLE Spreadsheet_Excel_Writer Text_Password".
+
+Si no tens accés d'administrador, l'administrador del lloc pot estar disposat a executar el comandament anterior. Una simple trucada o un correu electrònic haurien de facilitar el contacte. 
+
+b) Descarrega el paquete PEAR de Sourceforge.net
+
+Ja que molt serveis web d'allotjament no voldran instal·lar res per a tu, o facilitar-hi accés, et proporcionem el conjunt de biblioteques necessàries com un paquet a Sourceforge (http://sourceforge.net/project/showfiles.php?group_id=136704). Les has de descarregar i descomprimir.  
+
+El següent pas consisteix en carregar les biblioteques en un espai del servidor. Per motius de seguretat, hauràs d'escollir un espai no accessible per HTTP, però sí per FTP. En general, el directori per defecte serà un espai (els arxius d'accés, amb els arxius d'intercanvi local, normalment se situen a la subcarpeta htdocs, o a public_html). En tot cas, hauràs d'escollir un espai on carregar els arxius PEAR.
+
+L'últim pas és editar l'arxiu de configuració de text "includes / inc.config.php" i establir el valor PEAR_PATH. Aquest valor s'ha d'ajustar a la ruta completa d'accés a la carpeta del servidor. Si no saps la ruta, vés a http://your-domain-name/path.php i apareixerà la ubicació dels arxius al servidor. Per exemple, en el cas de "/ home / usuario / htdocs" es podria establir PEAR_PATH a "/ home / usuario / PEAR". Tingues en compte que si estableixes aquesta variable de forma incorrecta, rebràs molts missatges d'error quan intentis fer servir LocalExchange. Si és així, hauries de repetir aquest pas. Tingues en compte també que si estàs fent servir un servidor Windows, possiblement hauràs de fer servir la doble barra al PEAR_PATH (és a dir, "C: \ \ Archivos de programa \ \ PEAR"). No sé per què...
+
+Ok, endavant.
+
+3. Crea una nueva base de dades MySQL i, com a mínim un compte d'usuari amb accés complet. Pots cridar la base de dades i l'usuari com vulguis, però hauràs d'introduir aquesta informació a l'arxiu de text de configuració "includes / inc.config.php".
+
+4. Edita includes / inc.config.php. Aquest arxiu conté moltes configuracions opcionals. Fan falta el nom de domini i les dades de configuració de registre. També hauràs d'establir els valors de les adreces de correu-e.
+
+5. Obre un navegador. Vés a http://your-domain-name/create_db.php. Això crearà les taules de les bases de dades i inserirà les dades inicials. 
+
+Nota
+   
+   En aquesta versió feta per totbisbal.com és necessari instal·lar la base de dades des de l'arxiu adjunt amb la carpeta install/bdt.sql. La forma més senzilla de fer-ho és des de phpmyadmin i important el document. 
+
+6. Ara hauries de poder connectar amb l'usuari "admin" i la contrasenya "password". Vés a la secció Perfil i, per seguretat, canvia la contrasenya del compte. 
+
+7. També per motius de seguretat hauràs d'esborrar el directori install/ del servidor.
+
+8. Per fer servir les funcions de pujada d'arxius (per exemple, pujar un butlletí informatiu), hauràs d'establir els permisos dels "arxius pujats" de manera que el compte d'usuari (sovint www-data) tingui permisos d'escriptura.  
+
+Configuració addicional:
+
+1. Edita style.css, inc.config.php i afegeix arxius d'imatge a la carpeta "imatges" per personalitzar l'espai. Les imatges es poden modificar editant l'arxiu inc.config.php.
+
+2. La carpeta "info" conté un seguit d'arxius html estàtics que ajuden a explicar què és la moneda local. Pots fer servir aquests arxius com vulguis, és clar, però possiblement els vulguis adaptar a les teves necessitats. Els arxius s'han d'editar amb un editor de text. El sistema no inclou cap editor de continguts en aquests moments. 
+
+3. Les categories de la llista es poden editar per defecte al menú d'administració. 
+
+El sistema corre sobre Linux i FreeBSD. Hauria de funcionar també en un servidor Windows, però no ho hem verificat. 
+
+Si tens preguntes o comentaris, pots enviar un correu-e a bdt@totbisbal.com
+
+* Les taules InnoDB es fan servir per tenir la base dades equilibrada. El sistema es pot fer servir sense suport per a InnoDB, però no es recomana. Hauràs de comentar les línies a la part superior de l'arxiu create_db.php. Si contactes l'adminsitrador de la base de dades, pregunta-li si es pot activar. Pots prendre de referència http://dev.mysql.com/doc/mysql/en/innodb-overview.html

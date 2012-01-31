@@ -1,0 +1,3 @@
+BDT 1.0 es una rama de Local Exchange, versión 1.01
+
+En esta versión incluímos la posibilidad de añadir literales y archivos para diferentes idiomas. Aparecen por defecto el catalán y el castellano, pero se facilita la inclusión de otros.

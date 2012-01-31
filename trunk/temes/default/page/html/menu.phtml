@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file Plantilla para menu
+ *
+ * @todo En el siguiente if he cambiado  $_SESSION["REQUEST_URI"]  por   SERVER_PATH_URL;?>/member_login.php
+ * porque no leía la sesión.
+ */
+
+?>
+   <div id="sidebar">
+      <?php foreach ($this->sidebar_buttons as $menu_item) { 
+
+				echo $menu_item -> DisplayButton()
+				;
+				
+         } ?>
+
+      <?php if (!$cUser->IsLoggedOn()) { ?>
+
+      <div class="entraUsuari"><b><?php echo l("Associats/es:");?></b><br />
+         <form action='<?php echo SERVER_PATH_URL;?>/login.php' method="POST">
+            <input type=hidden name=action value=login />
+            <input type=hidden name=location value='<?php echo SERVER_PATH_URL;?>/member_login.php' /><br />
+            <?php echo l("Identificador");?>:<br />
+            <input class="formulari2" type=text style="width: 100px" name=user /><br />
+            <?php echo l("Clau");?>:<br />
+            <input class="formulari2" TYPE=PASSWORD style="width: 100px" NAME=pass /><br /><br />
+            <div style="padding: 5px 0px 5px 26px;">
+            <input class="formulari2" TYPE=SUBMIT VALUE='<?php echo l("Entrar");?>' />
+            </div>
+         </form>
+      </div>
+<?php } ?>
+   </div>
+   <div id="maincontent">
+      <div class="centre"><?php echo $cErr->ErrorBox();
