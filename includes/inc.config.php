@@ -84,8 +84,8 @@ define ("IMAGES_PATH",SERVER_DOMAIN.SERVER_PATH_URL."/images/");
 /***************** DATABASE LOGIN  ************************/
 
 
-define ("DATABASE_USERNAME","mytotbisbal");
-define ("DATABASE_PASSWORD","jBABubajabsAJs12");
+define ("DATABASE_USERNAME","usuaribdt");
+define ("DATABASE_PASSWORD","usuaribdtpass");
 define ("DATABASE_NAME","totproves");
 define ("DATABASE_SERVER","localhost"); // often "localhost"
 
