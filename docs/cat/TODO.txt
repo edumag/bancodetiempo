@@ -1,0 +1,4 @@
+Llista de tasques pendents
+--------------------------
+
+- Els formularis haurien de treballar amb la llibreria PEAR QuickForm2 en comptes de QuickForm per acabar de passar l'aplicació a php5.

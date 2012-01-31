@@ -1,0 +1,45 @@
+<HTML>
+   <HEAD>
+      <link rel="SHORTCUT ICON" href="http://<?php echo  HTTP_BASE ;?>/images/favicon.ico" />
+      <link rel="stylesheet" href="http://<?php echo  HTTP_BASE .'/'. SITE_STYLESHEET ;?>" type="text/css" />
+      <META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=UTF-8" />
+      <meta name="description" content="<?php echo $this->page_title;?>" />
+      <meta NAME="keywords" content="<?php echo  $this->keywords ;?>" />
+      <TITLE><?php echo  PAGE_TITLE_HEADER . $title ;?></TITLE>
+   </HEAD>
+   <BODY>
+<div class="cajaDauratbdt">
+	<div class="capbdt">
+      <div class="escutcap"><img src="http://<?php echo HTTP_BASE."/images/". HEADER_LOGO ;?>" alt="<?php echo SITE_SHORT_TITLE ;?>" border="0" />
+      </div>
+      <div class="logo" align="center">
+      <a rel="nofollow" href="http://<?php echo HTTP_BASE;?>" title=" <?php echo SITE_SHORT_TITLE." - ".l("Anar a la pàgina d'inici");?>">
+      <img src="http://<?php echo HTTP_BASE."/images/". HEADER_TITLE ;?>" /></a>
+      </div>
+      <div class="subtitol"><?php echo SITE_LONG_TITLE;?>
+      </div>
+      
+      <div class="capA" id="cap3">
+      
+      <!-- /* Menu idiomas */ -->
+      
+         <div id='idiomas' style='text-align: right;'>
+         <a id="cat" class='idioma_<?php echo (( $_SESSION['bdt-idioma'] == 'ca') ? 'on' : 'off');?>' href='?idioma=ca' title=" - Català - "></a>
+         <a id="cast" class='idioma_<?php echo (($_SESSION['bdt-idioma'] == 'es') ? 'on' : 'off');?>' href='?idioma=es' title=" - Castellano - "></a>
+         <!--<a id="fr" class='idioma_<?php echo (( $_SESSION['bdt-idioma'] == 'fr') ? 'on' : 'off');?>' href='?idioma=fr' title=" - Français - "></a>
+         <a id="en" class='idioma_<?php echo (( $_SESSION['bdt-idioma'] == 'en') ? 'on' : 'off');?>' href='?idioma=en' title=" - English - "></a>
+         <a id="ger" class='idioma_<?php echo (( $_SESSION['bdt-idioma'] == 'al') ? 'on' : 'off');?>' href='?idioma=en' title=" - Deutsch - "></a>-->
+         </div>
+      
+      <!-- 	/* Acaba Menu idiomas */ -->
+      
+      <?php if ($cUser->IsLoggedOn()) { ?>
+      
+      <b class="nomUsuari"><?php echo $cUser->PrimaryName();?></b>
+      <br />
+      <?php echo $cUser->UserLoginLogout(); ?>
+      <?php } ?>
+      </div>
+   </div>
+		<!-- 	/* Part central */ -->
+      

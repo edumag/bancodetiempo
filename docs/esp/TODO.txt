@@ -1,0 +1,5 @@
+Lista de tareas pendientes
+--------------------------
+
+- Los formularios deberían trabajar con la librería de PEAR QuickForm2 en vez de QuickForm 
+  para acabar de pasar la aplicación a php5.

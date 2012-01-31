@@ -1,0 +1,59 @@
+Este software se licencia bajo GPL (ver GPL.txt para más información). No tiene  garantía o garantías de ningún tipo, en lo concerniente a la legislación vigente.
+
+Requiere:
+
+- PHP 5.1 o superior
+- MySQL 3.23 o superior con soporte para tablas InnoDB *
+- Las bibliotecas que se especifican a continuación
+
+1. Subir los archivos LocalExchange a un servidor web
+
+2. Instalar las bibliotecas PHP Pear. Hay varias formas de hacerlo. A continuación se detallan dos. Para obtener más opciones, consulta http://pear.php.net/manual/en/installation.shared.php
+
+a) Usar el instalador PEAR
+
+Si PEAR se ha instalado en el servidor web y tienes acceso a la administración (ver pear.php.net para más información) puedes copiar y pegar el siguiente comando abriendo un terminal y luego siguiendo adelante con el paso 3:
+
+"Pear install-f File_PDF HTML_Common HTML_QuickForm HTML_Table HTTP HTTP_Download HTTP_HEADER Mail_Mime OLE Spreadsheet_Excel_Writer Text_Password".
+
+Si no tienes acceso como administrador, el administrador del sitio web puede estar dispuesto a ejecutar el comando anterior. Una simple llamada o correo electrónico deberían facilitar el contacto.
+
+b) Descargar Paquete de PEAR de Sourceforge.net
+
+Dado que muchos servicios web de alojamiento no estarán dispuestos a instalar nada por ti, o a darle acceso, hemos proporcionado el conjunto de bibliotecas necesarias como un paquete en Sourceforge (http://sourceforge.net/project/showfiles.php?group_id=136704). Debes descargarlas y descomprimirlas. 
+
+El siguiente paso consiste en cargar las bibliotecas en un espacio del servidor web. Por razones de seguridad, deberás elegir una ubicación no  accesible por HTTP, pero sí a través de FTP. En general, el directorio por defecto será un espacio (los archivos de acceso web, como los archivos de intercambio local, están por lo general en una subcarpeta htdocs o public_html). En cualquier caso, deberás elegir un espacio donde cargar los archivos PEAR.
+
+El último paso consiste en editar el archivo de configuración de texto "includes / inc.config.php" y establecer el valor PEAR_PATH. Este valor se debe ajustar a la ruta completa de acceso en la carpeta del servidor. Si no conoces la ruta, ve a http://your-domain-name/path.php y aparecerá la ubicación de los archivos en el servidor. Por ejemplo, en el caso de "/ home / usuario / htdocs" se podría establecer PEAR_PATH a "/ home / usuario / PEAR". Ten en cuenta que si se establece esta variable de forma incorrecta, recibirás muchos mensajes de error cuando intentes utilizar LocalExchange. Si es así, deberías volver sobre este paso. También ten en cuenta que si estás usando un servidor Windows, es posible que debas usar la doble barra en el PEAR_PATH (es decir, "C: \ \ Archivos de programa \ \ PEAR"). No sé por qué...
+
+Ok, adelante.
+
+3. Crear una nueva base de datos MySQL y, como mínimo, una cuenta de usuario con acceso completo. Puedes llamar a la base de datos y usuario que quieras, pero deberás introducir esa información en el archivo de texto de configuración "includes / inc.config.php".
+
+4. Editar includes / inc.config.php. Este archivo contiene muchas configuraciones opcionales. Son necesarios el nombre de dominio y los datos de configuración de registro. También deberás establecer los valores de las direcciones de correo electrónico.
+
+5. Abre un navegador web. Ve a http://your-domain-name/create_db.php. Esto creará las tablas de las bases de datos e insertará los datos iniciales.
+
+Nota
+   
+   En esta versión realizada por totbisbal.com es necesario hacer una instalación de la base de datos desde el archivo adjunto en la carpeta install/bdt.sql. La forma más sencilla de hacerlo es desde phpmyadmin e importando el documento.
+
+6. Ahora deberías ser capaz de conectar con el usuario "admin" y la contraseña "password". Ve a la sección Perfil y, por seguridad, cambia la contraseña de esta cuenta.
+
+7. También por razones de seguridad deberás borrar el directorio install/ del servidor.
+
+8. Con el fin de utilizar las funciones de la subida de archivos (por ejemplo, subir un boletín de noticias), deberás establecer los permisos de los "archivos subidos" de manera que la cuenta de usuario web (a menudo www-data) tenga permisos de escritura. 
+
+Configuración adicional:
+
+1. Edita style.css, inc.config.php y añade archivos de imagen a la carpeta "imágenes" para personalitzar el sitio. Las imágenes se pueden modificar editanto el archivo inc.config.php.
+
+2. La carpeta "info" contiene una serie de archivos html estáticos que ayudan a explicar qué es la moneda local. Puedes usar estos archivos como quieras, por supuesto, pero es posible que desees adaptarlos a tus necesidades. Los archivos se deben editar con un editor de texto. Actualmente el sistema no incluye ningún editor de contenidos.
+
+3. Las catergorías listadas por defecto se puden editar desde el menú de administración.
+
+El sistema corre en Linux y FreeBSD. Debería correr también en un servidor Windows, pero esto no ha sido probado. 
+
+Si tienes preguntas o comentarios puedes enviar un correo electrónico a bdt@totbisbal.com
+
+* Las tablas InnoDB se utilizan para tener la base de datos en equilibrio. Es posible utilizar el sistema sin soporte para InnoDB, pero no es recomendable. Para ello, tendrás que comentar las líneas en la parte superior del archivo create_db.php. Si contactas al administrador de la base de datos, pregúntale si se puede activar. Como referencia puedes consultar http://dev.mysql.com/doc/mysql/en/innodb-overview.html
