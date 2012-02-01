@@ -7,9 +7,9 @@
 ?>
 		</div>
 	</div>
-	<div id="footer" align="center">
+   	<div id="footer" align="center">
 		<?php if ($cUser->IsLoggedOn()) { ?>
-		<a href="<?php echo $_SERVER["PHP_SELF"];?>"?printer_view=1&"<?php echo $_SERVER["QUERY_STRING"];?>" target="_blank"><?php echo l("Versió per imprimir");?> <img src=http://"<?php echo IMAGES_PATH ;?>"print.gif border="0"></a> • 
+		<a href="<?php echo $_SERVER["PHP_SELF"];?>"?printer_view=1&"<?php echo $_SERVER["QUERY_STRING"];?>" target="_blank"><?php echo l("Versió per imprimir");?> <img src="http://<?php echo IMAGES_PATH ;?>print.gif" border="0"></a> • 
 		<?php } ?>
 		<?php echo l("Creat sota")?> <a target="_blank" href="http://www.gnu.org/copyleft/gpl.html\">GPL</a> • <a href="http://"<?php echo HTTP_BASE ;?>/info/credits.php"><?php echo l("Credits"); ?></a>
    </div>
