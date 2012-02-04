@@ -6,4 +6,4 @@ Aquest espai es basa en el programari lliure desenvolupat per Calvin Priest per 
 
 
 <p>Correcció de la traducció a càrrec d'Ignasi Corney.</p>
-<p>Adaptació del sistema d'idiomes: Eduard Magrané i Jaume Figa de <a href="http://www.totarreu.com">totarreu.com</a>.</p>
+<p>Adaptació a bdtlabisbal i creació del sistema d'idiomes: Eduard Magrané i Jaume Figa per totbisbal.com.</p>
