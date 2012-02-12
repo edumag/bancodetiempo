@@ -211,7 +211,7 @@ class cListingGroup
 	{
 		global $cDB, $cErr;
 
-      if ( empty($this->listing) ) return false;
+      //if ( empty($this->listing) ) return false;
 
 		if($title == null)
 			$this->title = "%";
