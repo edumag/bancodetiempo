@@ -1,5 +1,14 @@
 <?php 
 
+/**
+ * @file member_self.php
+ *
+ * @todo Parece que el envio de emails da problemas con algunos servidores, en barrisdemontjuic 
+ *       hemos cambiado algunos archivos quitando la funcion iconv que convierte el texto a la
+ *       codificación de windows. Se debería centralizar el envio en una función y trabajar 
+ *       unicamente en UTF8
+ */
+
 include_once("includes/inc.global.php");
 
 //$cUser->MustBeLevel(1);
